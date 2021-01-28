@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.carfix.serviceplatform.notification.config.NotificationConfig
+org.springframework.beans.factory.config.BeanFactoryPostProcessor=\
+  com.carfix.serviceplatform.notification.config.NotificationBuilderAggregatorInterceptorBeanFactoryPostProcessor,\
+  com.carfix.serviceplatform.notification.config.NotificationAvailabilityValidatorInterceptorBeanFactoryPostProcessor

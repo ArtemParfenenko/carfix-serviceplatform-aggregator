@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.carfix.serviceplatform.rocketsms.config.RocketSmsConfig
+org.springframework.beans.factory.config.BeanFactoryPostProcessor=com.carfix.serviceplatform.rocketsms.config.RocketSmsClientInterceptorBeanFactoryPostProcessor
