@@ -27,3 +27,7 @@
 
 **/target
 **/.DS_Store
+
+**/.mvn
+**/mvnw
+**/mvnw.cmd

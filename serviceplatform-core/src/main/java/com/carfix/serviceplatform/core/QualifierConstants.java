@@ -6,4 +6,6 @@ public interface QualifierConstants {
     String ROCKET_SMS_CLIENT = "rocketSmsClient";
     String NOTIFICATION_BUILDER_AGGREGATOR = "notificationBuilderAggregator";
     String NOTIFICATION_SOURCE_VALIDATOR = "notificationSourceValidator";
+    String AUTHORIZED_REST_TEMPLATE = "authorizedRestTemplate";
+    String KEYCLOAK_ADMIN_CLIENT = "keycloakAdminClient";
 }

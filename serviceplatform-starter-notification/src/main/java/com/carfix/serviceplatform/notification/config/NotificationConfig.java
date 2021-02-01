@@ -6,6 +6,7 @@ import com.carfix.serviceplatform.notification.listener.NotificationEventListene
 import com.carfix.serviceplatform.notification.processor.NotificationProcessor;
 import com.carfix.serviceplatform.notification.validator.NotificationAvailabilityValidator;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import org.springframework.context.event.SimpleApplicationEventMulticaster;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 @Configuration
+@EnableConfigurationProperties(NotificationProperties.class)
 public class NotificationConfig {
 
     @Bean

@@ -1,11 +1,13 @@
 package com.carfix.serviceplatform.rocketsms.client;
 
+import com.carfix.serviceplatform.core.QualifierConstants;
 import com.carfix.serviceplatform.core.exception.ServicePlatformException;
 import com.carfix.serviceplatform.rocketsms.util.RocketSmsPropertiesProvider;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -34,7 +36,8 @@ public class DefaultRocketSmsClient implements RocketSmsClient {
     private final RocketSmsPropertiesProvider propertiesProvider;
     private final ObjectMapper objectMapper;
 
-    public DefaultRocketSmsClient(RestTemplate restTemplate, RocketSmsPropertiesProvider propertiesProvider) {
+    public DefaultRocketSmsClient(@Qualifier(QualifierConstants.ROCKET_SMS_REST_TEMPLATE) RestTemplate restTemplate,
+                                  RocketSmsPropertiesProvider propertiesProvider) {
         this.restTemplate = restTemplate;
         this.propertiesProvider = propertiesProvider;
         this.objectMapper = new ObjectMapper();

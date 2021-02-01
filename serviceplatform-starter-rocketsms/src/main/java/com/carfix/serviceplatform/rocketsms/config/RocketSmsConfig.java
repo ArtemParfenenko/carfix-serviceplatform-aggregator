@@ -4,6 +4,7 @@ import com.carfix.serviceplatform.core.QualifierConstants;
 import com.carfix.serviceplatform.rocketsms.client.DefaultRocketSmsClient;
 import com.carfix.serviceplatform.rocketsms.client.RocketSmsClient;
 import com.carfix.serviceplatform.rocketsms.util.RocketSmsPropertiesProvider;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class RocketSmsConfig {
 
     @Bean(QualifierConstants.ROCKET_SMS_REST_TEMPLATE)
+    @Qualifier(QualifierConstants.ROCKET_SMS_REST_TEMPLATE)
     @ConditionalOnRocketSmsProperties
     public RestTemplate rocketSmsRestTemplate() {
         return new RestTemplate();
@@ -21,7 +23,8 @@ public class RocketSmsConfig {
 
     @Bean(QualifierConstants.ROCKET_SMS_CLIENT)
     @ConditionalOnRocketSmsProperties
-    public RocketSmsClient rocketSmsClient(RestTemplate restTemplate, RocketSmsPropertiesProvider propertiesProvider) {
+    public RocketSmsClient rocketSmsClient(@Qualifier(QualifierConstants.ROCKET_SMS_REST_TEMPLATE) RestTemplate restTemplate,
+                                           RocketSmsPropertiesProvider propertiesProvider) {
         return new DefaultRocketSmsClient(restTemplate, propertiesProvider);
     }
 

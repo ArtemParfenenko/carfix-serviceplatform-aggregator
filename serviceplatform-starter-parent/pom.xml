@@ -31,6 +31,11 @@
             </dependency>
             <dependency>
                 <groupId>com.carfix.serviceplatform</groupId>
+                <artifactId>serviceplatform-starter-keycloak</artifactId>
+                <version>1.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.carfix.serviceplatform</groupId>
                 <artifactId>serviceplatform-starter-rocketsms</artifactId>
                 <version>1.0.RELEASE</version>
             </dependency>

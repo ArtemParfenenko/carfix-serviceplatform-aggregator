@@ -17,6 +17,7 @@
         <module>serviceplatform-core</module>
         <module>serviceplatform-starter-rocketsms</module>
         <module>serviceplatform-starter-security</module>
+        <module>serviceplatform-starter-keycloak</module>
         <module>serviceplatform-starter-notification</module>
         <module>serviceplatform-starter-parent</module>
     </modules>
@@ -29,6 +30,7 @@
         <serviceplatform.version>1.0.RELEASE</serviceplatform.version>
         <java.version>1.8</java.version>
         <auth0.version>3.8.1</auth0.version>
+        <keycloak.version>11.0.2</keycloak.version>
     </properties>
 
     <dependencyManagement>
@@ -42,6 +44,16 @@
                 <groupId>com.carfix.serviceplatform</groupId>
                 <artifactId>serviceplatform-core</artifactId>
                 <version>${serviceplatform.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-spring-boot-starter</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-admin-client</artifactId>
+                <version>${keycloak.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
