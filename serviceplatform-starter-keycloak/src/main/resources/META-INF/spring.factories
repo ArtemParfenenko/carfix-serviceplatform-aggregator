@@ -1,3 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.carfix.serviceplatform.keycloak.config.SecurityConfig, \
-  com.carfix.serviceplatform.keycloak.config.KeycloakClientConfig
+  com.carfix.serviceplatform.keycloak.config.KeycloakConfig
